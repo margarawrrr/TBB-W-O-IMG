@@ -1,0 +1,298 @@
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('fonts/poppins.bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: Poppins-Light;
+    src: url('fonts/poppins.light.ttf') format('truetype');
+}
+body {
+    background-color: #fdfcea;
+}
+.hero {
+    padding: 35px;
+    background-color: #820808;
+    border-radius: 50px;
+    margin: 50px auto;
+    max-width: 1100px;
+}
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 400px;
+}
+.hero-text {
+    display: inline-block;
+    width: 55%;
+    animation: fadeIn 1s ease-in-out;
+}
+.hero-content hr {
+    max-width: 100%;
+    height: 2px;
+    background-color: #fdfcea;
+    border: none;
+    margin: 0 auto 30px auto;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.hero-title {
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 30px;
+    color: #fdfcea;
+    margin: 10px;
+}
+.hero-description {
+    font-family: 'Poppins-Bold', sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fdfcea;
+}
+.hero-image {
+    width: 40%;
+    animation: fadeIn 1s ease-in-out;
+}
+.hero-image img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+#fillform {
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #fdfcea;
+    color: #820808;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Poppins-Bold;
+    cursor: pointer;
+}
+#fillform:hover {
+    background-color: #cc1111;
+    color: #fdfcea;
+}
+.form-submit {
+    padding: 30px 25px 70px;
+}
+.form-submit form {
+    background-color: #820808;
+    max-width: 650px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    padding: 45px;
+    border-radius: 12px;
+    box-shadow: 0 7px 20px rgba(92, 89, 89, 0.651);
+}
+.form-submit form::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(background/reco.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.20;
+    z-index: 0;
+}
+.form-submit form > * {
+    position: relative;
+    z-index: 1;
+}
+.form-submit label {
+    display: inline-block;
+    margin-bottom: 13px;
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #fdfcea;
+    font-size: 20px;
+    font-weight: bold;
+}
+.form-submit form h2, .form-submit form p {
+    font-family: 'Poppins-Bold', sans-serif;
+    text-align: center;
+    color: #fdfcea;
+    margin-bottom: 25px;
+}
+.form-submit h2 {
+    font-size: 35px;
+}
+.form-submit p {
+    font-size: 20px;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+#businessadd {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 15px;
+}   
+.select-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+.select-container label {
+    margin-bottom: 13px;
+}
+.category {
+    border: 1px solid gray;
+    appearance: none;
+    padding: 20px;
+    padding-right: 70px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    color: black;
+    background-color: white;
+    font-size: 15px;
+}
+.select-container .icon-container {
+    width: 50px;
+    height: 59px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #5e0505;
+    pointer-events: none;
+}
+.icon-container i {
+    font-size: 30px;
+    color: white;
+}
+.bttn {
+    width: 100%;
+    text-align: center;
+}
+.bttn button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    background-color: #fdfcea;
+    color: #820808;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.bttn button[type="submit"]:hover {
+    background-color: #820808;
+    color: #fdfcea;
+}
+.hero-description a {
+    color: #fdfcea;
+    text-decoration: none;
+}
+.hero-description a:hover {
+    color: #e6e2b2;
+}
+.rating {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.rating-label {
+    display: inline-block;
+    margin-bottom: 13px;
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #fdfcea;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.star-icon {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 5px;
+}
+.star-icon input {
+    display: none;
+}
+.star-icon label {
+    font-family: FontAwesome;
+    margin: 0;
+    font-size: 40px;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.star-icon label:hover, .star-icon label:hover ~ label, .star-icon input:checked ~ label {
+    color: #fff75a;
+}
+/* "~" means following sibling elements. ito yung mga element na kasunod nung naungng star.
+   Ginamit para ma color din ang mga stars na kasama sa rating. */
+
+@media (max-width: 900px) {
+    .hero {
+        max-width: 90%;
+        margin: 25px;
+    }
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(95, 93, 93, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.dialog {
+    background-color: #fdfcea;
+    width: 90%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+}
+.dialog h2 {
+    font-family: 'Poppins-Bold', sans-serif;
+    color: #820808;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+.dialog p {
+    font-family: 'Poppins-Light', sans-serif;
+    margin-bottom: 25px;
+    color: #000000;
+    line-height: 1.6;
+    font-size: 17px;
+}
+.dialog button {
+    padding: 12px 30px;
+    border: none;
+    font-family: 'Poppins-Bold', sans-serif;
+    background-color: #820808;
+    color: #fdfcea;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.dialog button:hover {
+    background-color: #5e0505;
+}

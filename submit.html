@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Budget Bite | Submit</title>
+    <!-- Font Awesome 4.7.0: external library sha ggamit para makapaglagay ng icons tulad ng stars at dropdown arrow sa page -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="submit.css">
+    <link rel="stylesheet" href="footer.css">   
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <img src="logo/logo.png" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="collections.html">Collections</a></li>
+                <li><a href="submit.html">Submit</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Recommend a place</h1>
+                <hr>
+                <p class="hero-description">Know a café or restaurant that deserves to be featured?<br><br>
+                <a href="#form" id="fillform">Submit a form</a>
+                </p>
+            </div>
+            <div class="hero-image">
+                <img src="background/recocafe.jpg" alt="Recommendations">
+            </div>      
+        </div>
+    </section>
+    <section class="form-submit" id="form">
+        <form id="formSubmit" action="#" method="post">
+        <h2>Got a Suggestion?</h2>
+
+        <p>Fill out the form below.</p>
+
+        <label for="bName">Business Name:</label><br>
+        <input type="text" name="businessname" id="bName" placeholder="Enter business name" maxlength="100"><br><br>
+        <label for="businessadd">Address:</label><br>
+        <textarea id="businessadd" name="address" rows="5" cols="52" placeholder="Enter address here" maxlength="200"></textarea> <br><br>
+        
+        <div class="select-container">
+        <label for="category">Category</label>
+            <select class="category" id="category" name="category">
+                <option value="">Select Category</option>
+                <option value="cafe">Cafe</option>
+                <option value="resto">Restaurant</option>
+            </select>
+            <!-- "fa" = para sa Font Awesome tapos yung "fa-caret-down" = yung sa dropdown arrow na ganito ▼
+            yung i naman para ma-display yung icon -->
+            <div class="icon-container">
+                <i class="fa fa-caret-down"></i>
+            </div>
+        </div>
+        <div class="rating">
+                <div class="rating-label">Rate your experience</div>
+                <div class="star-icon">
+                    <input type="radio" name="rating" id="rating1" value="1">
+                    <label for="rating1" class="fa fa-star"></label>
+                    <input type="radio" name="rating" id="rating2" value="2">
+                    <label for="rating2" class="fa fa-star"></label>
+                    <input type="radio" name="rating" id="rating3" value="3">
+                    <label for="rating3" class="fa fa-star"></label>
+                    <input type="radio" name="rating" id="rating4" value="4">
+                    <label for="rating4" class="fa fa-star"></label>
+                    <input type="radio" name="rating" id="rating5" value="5">
+                    <label for="rating5" class="fa fa-star"></label>
+                <!-- "fa" =ginagamit para sa Font Awesome tapos yung "fa-star" =para makuha yung star icon na ginamit dito -->
+                </div>
+            </div>
+        <div class="bttn">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+    <!-- Para sa dialog box -->
+    <div class="overlay" id="overlay">
+        <div class="dialog" role="dialog" aria-modal="true" aria-labelledby="messageTitle">
+            <h2 id="messageTitle">Incomplete Information</h2>
+            <p id="messageText">Please complete all information before submitting.</p>
+            <button type="button" onclick="closeDialog()">Ok</button>
+        </div>
+    </div>
+    </section>
+<footer>
+        <div class="ftr-container">
+            <div class="ftr-about-us">
+                <span id="about-us">About Us</span>
+                <p id="our-story"><a href="our-story.html">Our Story</a></p>
+            </div>
+            <div class="ftr-contacts">
+                <span id="contacts">Contacts</span>
+                <p class="email">
+                    <a href="mailto:thebudgetbites@gmail.com">thebudgetbite@gmail.com</a>
+                </p>
+                <p id="number">0912-345-6789</p>
+                <p id="address">Cabanatuan City, Nueva Ecija</p>
+                <div class="footer-icons">
+                    <a href="mailto:thebudgetbites@gmail.com"><img src="footer icons/email.png"></a>
+                    <img src="footer icons/phone.png">
+                    <img src="footer icons/location.png">
+                </div>
+            </div>
+        </div>    
+    </footer>
+    <div class="copyright">
+        <p id="copyright-text">&copy 2026 The Budget Bite. All Rights Reserved.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('fonts/poppins.bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Poppins-Light;
+    src: url('fonts/poppins.light.ttf') format('truetype');
+}
+
+body {
+    background-color: #fdfcea;
+    color: #820808;
+    margin: 0;
+    font-family: Poppins-Light;
+}
+/* = INTRO = */
+
+.intro {
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    font-family: Poppins-Bold;
+    background-image:
+        linear-gradient(
+            rgba(181, 43, 45, 0.312),
+            rgba(181, 43, 45, 0.349)
+        ),
+        url("background/caf.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.intro p {
+    font-size: 25px;
+    font-weight: 700;
+    color: #f4f4f3;
+    text-align: center;
+}
+
+/* = TABLE =*/
+
+.table1 {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+table {
+    width: 70%;
+    margin: 0 auto;
+
+    /* FIXED BORDER */
+    border: 1px solid #5e1010;
+
+    /* naglagay aq ng ganto pra sa border radius (naka separate kc di nagana si radius sa bottom part of table pag naka collapse */
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px 2px rgb(164, 163, 163);
+}
+
+/* = TABLE TITLE = */
+
+.title {
+    background-color: #820808;
+    padding: 12px;
+    color: #fdfcea;
+    font-size: 20px;
+}
+
+/* = TABLE HEADER = */
+
+th {
+    background-color: #c13636;
+    color: #fdfcea;
+    padding: 8px 12px;
+    font-family: Poppins-Bold;
+}
+
+/* = PURPOSE section = */
+
+.prp {
+    background-color: #992222;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* = TABLE CELLS = */
+
+td {
+    padding: 8px 12px;
+    text-align: center;
+    color: #820808;
+    background-color: #fefef384;
+
+    /* Cell borders */
+    border-right: 1px solid #5e1010;
+    border-bottom: 1px solid #5e1010;
+
+    transition: 0.3s;
+}
+
+/* nagtanggal aq extra borders kc pag wala nito nacucut yung border radius sa bottom */
+/* Last column */
+th:last-child,
+td:last-child {
+    border-right: none;
+}
+/* Last row */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* = alt. rows = */
+
+.table1 tbody tr:nth-child(even) td:nth-child(2),
+.table1 tbody tr:nth-child(even) td:nth-child(3) {
+    background-color: #c13636;
+    color: white;
+}
+
+/* = hover effect = */
+
+.table1 tbody tr:hover td {
+    background-color: #ffc2c2;
+    color: #820808;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .intro {
+        width: 100vw;  /* sakop ng intro yung buong lapad ng screen */
+        max-width: 100%;
+        margin: 0;
+        padding: 25px 15px;
+    }
+
+    .intro p {
+        font-size: 17px;
+        margin: 0;
+    }
+
+    .table1 {
+        width: 100%;
+        overflow-x: auto;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding: 0;
+    }
+
+    table {
+        min-width: 300px;
+        font-size: 14px;
+        margin: 20px auto;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+}

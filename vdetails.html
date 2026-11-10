@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Budget Bite | Details</title>
+    <link rel="stylesheet" href="vdetails.css">
+</head>
+<body>
+    <main class="details-container">
+        <section class="image-section">
+            <div id="slider">
+                <input type="radio" name="slider" id="slide1" checked>
+                <input type="radio" name="slider" id="slide2">
+                <input type="radio" name="slider" id="slide3">
+                <input type="radio" name="slider" id="slide4">
+
+                <div id="slides">
+                    <div id="overflow">
+                        <div class="inner">
+                            <div class="slide slide_1">
+                                <img id="place-image1" src="" alt="">
+                            </div>
+                            <div class="slide slide_2">
+                                <img id="place-image2" src="" alt="">
+                            </div>
+                            <div class="slide slide_3">
+                                <img id="place-image3" src="" alt="">
+                            </div>
+                            <div class="slide slide_4">
+                                <img id="place-image4" src="" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="controls">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+                </div>
+
+                <div id="bullets">
+                    <label for="slide1"></label>
+                    <label for="slide2"></label>
+                    <label for="slide3"></label>
+                    <label for="slide4"></label>
+                </div>
+            </div>
+            <a href="collections.html" class="collections-button">Back to Collections</a>
+        </section>
+
+        <section class="details-section">
+            <h1 id="place-name"></h1>
+            <h2>Address:</h2>
+            <p id="place-address"></p>
+            <h2>Operating Hours:</h2>
+            <p id="place-hours"></p>
+            <h2>Contact:</h2>
+            <p id="place-contact"></p>
+            <h2>Price Range:</h2>
+            <p id="place-price"></p>
+            <h2>Ratings:</h2>
+            <p id="place-rating"></p>
+        </section>
+    </main>
+    <script src="vdetails.js"></script>
+</body>
+</html>

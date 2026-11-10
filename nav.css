@@ -1,0 +1,176 @@
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('fonts/poppins.bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Poppins-Light;
+    src: url('fonts/poppins.light.ttf') format('truetype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+  font-family: 'Poppins-Light', sans-serif;
+  min-height: 100vh;
+}
+
+/* ito naman yung mismong lagayan */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: #820808;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.185);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+/* ito yung mga contents sa loob ng area ng nav bar */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 1600px;
+}
+
+/* ito yung para sa dearmnzy */
+.navbar-logo .logo{
+    display: flex;
+    align-items: center;
+    display: block;
+    max-height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* para sa mga menu buttons, if wala ito, naka list order sila instead of nakapa horizontal */
+.navbar-container .navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+/* para customized itsura ng menu button */
+.navbar-container .navbar-menu li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: Poppins-Bold, sans-serif;
+    font-weight: 500;
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+    text-shadow: 2px 2px 10px #00000082;
+}
+
+.navbar-container .navbar-menu > li {
+    position: relative;
+}
+
+/* para kapag ini-hover mo si cursor, magkakaroon ng highlights or magcchange color si button */
+.navbar-container .navbar-menu li a:hover {
+    color: #820808;
+    background-color: #fdfcea;
+}
+
+.navbar-toggle {
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* responsive style */
+@media (max-width: 900px) {
+    .navbar {
+        backdrop-filter: none;
+    }
+
+    .navbar-container .navbar-menu {
+        display: none; /* para kapag pinindot mo yung X ni toggle ay magcoclose si navigation */
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: 0;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        background: #820808;
+    }
+
+    /* add natin yung ginawa nating unang active dito */
+    .navbar-container .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: block;
+        z-index: 999;
+    }
+
+    /* toggle bar kapag active/pinindot, style lng ntin*/
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0; /* ito si middle line para maging invisible, kasi yung top and bottom line lng need para maging X */
+    }
+
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);   
+    }
+    /* itong si 1st and 2nd child, para kapag pinindot si toggle, from 3 lines magiging X sya for style */
+
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* para i-adjust lang uli for smaller screens*/
+    @media (max-width: 480px) {
+        .nav-container {
+            padding: 0, 1rem;
+        }
+        .navbar-logo {
+            font-size: 1.7rem;
+        }
+        .navbar-container .navbar-menu li a {
+            font-size: 1.2rem;
+            padding: 3px 15px;
+        }
+    }
+}
+

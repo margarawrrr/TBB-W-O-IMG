@@ -1,0 +1,182 @@
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('fonts/poppins.bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Poppins-Light;
+    src: url('fonts/poppins.light.ttf') format('truetype');
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: Poppins-Light;
+}
+
+body {
+    background-color: #fdfcea;
+}
+
+hr {
+    width: calc(100% - 200px);
+    height: 2px;
+    background-color: #820808;
+    border: none;
+    margin: 30px auto;
+}
+
+.budget-friendly {
+    margin: 50px;
+}
+
+.list-of-cafes,
+.list-of-restos,
+.cafe,
+.resto {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;          
+    column-gap: 2rem;
+    row-gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 40px 40px;
+    box-sizing: border-box;
+}
+
+.list-of-cafes > div,
+.list-of-restos > div,
+.cafe > div,
+.resto > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;          
+    min-width: 0;                 
+}
+
+img {
+    height: 250px;
+    width: 250px;
+    border-radius: 20px;
+    margin: 0 auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.list-of-cafes img,
+.list-of-restos img,
+.cafe img,
+.resto img {
+    width: min(250px, 100%);
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.collection-menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.collection-menu a {
+    font-family: Poppins-Bold;
+    color: #820808;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.collection-menu a:hover {
+    color: #fdfcea;
+    background-color: #820808;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.business-name {
+    font-family: Poppins-Bold;
+    color: #820808;
+    margin: 15px 0 8px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.address,
+.address-long {
+    color: #820808;
+    font-size: 15px;
+    margin: 0 0 20px;          
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+#button {
+    display: block;
+    box-sizing: border-box;
+    width: min(250px, 100%);
+    margin: auto 0 0;              
+    padding: 10px 0;
+    background-color: #820808;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#top-button {
+    color: #820808;
+    border: none;
+    padding: 10px;
+    display: block;
+    width: fit-content;
+    margin: 50px auto;
+}
+
+.budget-cafe,
+.budget-resto {
+    font-family: Poppins-Bold;
+    color: #820808;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .collection-menu a {
+        font-size: 1em;
+    }
+
+    .collection-menu {
+        gap: 1rem;
+    }
+
+    hr {
+        margin: 60px auto;
+    }
+
+    /* 2 columns on smaller screens like phones */
+    .list-of-cafes,
+    .list-of-restos,
+    .cafe,
+    .resto {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 1rem;
+        row-gap: 30px;
+        padding: 20px 16px 30px;
+    }
+}
